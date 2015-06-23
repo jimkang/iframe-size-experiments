@@ -1,6 +1,8 @@
 iframe size experiments
 ==================
 
+Here's some research on resizing an iframe so that its height matches that of its contents.
+
 Usage
 -----
 
