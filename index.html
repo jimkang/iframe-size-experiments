@@ -1,0 +1,30 @@
+<html>
+<head>
+  <title>yet-another-app</title>
+  <link rel="stylesheet" href="app.css"></link>
+</head>
+<body>
+
+<p>This is outside the iframe.</p>
+
+<iframe id="the-iframe" src="inner.html" width="100%" frameborder="0">
+</iframe>
+
+This is outside the iframe.
+
+<script>
+
+window.addEventListener('message', handleMessage, false);
+
+function handleMessage(e) {
+  var iframe = document.getElementById('the-iframe');
+  
+  if (e.data && e.data.newHeight) {
+    iframe.height = e.data.newHeight;
+  }
+}
+
+</script>
+
+</body>
+</html>
